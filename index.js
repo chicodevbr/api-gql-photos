@@ -16,7 +16,7 @@ const dbOptions = {
 mongoose
   .connect(dbUri, dbOptions)
   .then(() => console.log('\u{1F516} Database connected'))
-  .catch((error) => console.log('Databased failed: ', error));
+  .catch((error) => console.log('Database failed: ', error));
 
 const server = new ApolloServer({
   typeDefs: importSchema(schemaPath),

@@ -2,11 +2,11 @@ const { Post } = require('../models');
 
 const postResolver = {
   Query: {
-    posts() {
-      return Post.find();
+    async posts() {
+      return await Post.find({});
     },
-    post(_, { id }) {
-      return Post.findById(id);
+    async post(_, { id }) {
+      return await Post.findById(id);
     },
   },
   Mutation: {
@@ -14,13 +14,13 @@ const postResolver = {
       const newPost = new Post(post);
       return newPost.save();
     },
-    updatePost(_, { id, post }) {
-      return Post.findByIdAndUpdate(id, post, {
+    async updatePost(_, { id, post }) {
+      return await Post.findByIdAndUpdate(id, post, {
         new: true,
       });
     },
-    deletePost(_, { id }) {
-      return Post.findByIdAndRemove(id);
+    async deletePost(_, { id }) {
+      return await Post.findByIdAndRemove(id);
     },
   },
 };
