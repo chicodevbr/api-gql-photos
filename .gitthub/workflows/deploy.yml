@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: 14.x
 
+      - name: Limpar lock
+        run: git rm package-lock.json
+
       - name: Instalar dependencias
         run: yarn install
 
