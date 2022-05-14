@@ -15,7 +15,7 @@ const postResolver = {
       return newPost.save();
     },
     updatePost(_, { id, post }) {
-      return Post.findByIdAndUpdate(i, post, {
+      return Post.findByIdAndUpdate(id, post, {
         new: true,
       });
     },
