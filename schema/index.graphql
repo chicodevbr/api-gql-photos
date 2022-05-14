@@ -1,0 +1,3 @@
+#import Query from 'Query.graphql'
+#import User from 'User.graphql'
+#import Post from 'Post.graphql'
