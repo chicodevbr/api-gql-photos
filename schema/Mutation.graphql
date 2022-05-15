@@ -2,6 +2,7 @@ type Mutation {
   createPost(post: PostInput): Post
   updatePost(id: String, post: PostInput): Post
   deletePost(id: String): Post
+  updateHighlight(id: String): Post
 }
 
 input PostInput {
@@ -10,4 +11,5 @@ input PostInput {
   description: String
   post: String
   imageUrl: String
+  isHighlight: Boolean
 }

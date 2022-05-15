@@ -5,4 +5,5 @@ type Post {
   description: String
   post: String!
   imageUrl: String
+  isHighlight: Boolean
 }

@@ -6,6 +6,7 @@ const PostSchema = mongoose.Schema({
   description: String,
   post: String,
   imageUrl: String,
+  isHighlight: Boolean,
 });
 
 module.exports = mongoose.model('Post', PostSchema);

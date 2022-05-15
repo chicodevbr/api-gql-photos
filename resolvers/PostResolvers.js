@@ -22,6 +22,20 @@ const postResolver = {
     async deletePost(_, { id }) {
       return await Post.findByIdAndRemove(id);
     },
+    async updateHighlight(_, { id }) {
+      const post = await Post.findById(id);
+      if (!post) return 'Not found';
+
+      const updatePost = await Post.findByIdAndUpdate(
+        id,
+        {
+          isHighlight: !post.isHighlight,
+        },
+        { new: true }
+      );
+
+      return updatePost;
+    },
   },
 };
 
