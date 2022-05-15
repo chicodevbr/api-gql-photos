@@ -8,6 +8,11 @@ const postResolver = {
     async post(_, { id }) {
       return await Post.findById(id);
     },
+    async highlight(_, { isHighlight }) {
+      return await Post.findOne({ isHighlight })
+        .sort({ field: 'asc', _id: -1 })
+        .limit(1);
+    },
   },
   Mutation: {
     createPost(_, { post }) {

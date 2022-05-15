@@ -3,5 +3,5 @@ type Query {
   user(id: ID!): User
   posts: [Post]
   post(id: ID!): Post
-  highlight(id: ID!): Post
+  highlight(isHighlight: Boolean): Post
 }
