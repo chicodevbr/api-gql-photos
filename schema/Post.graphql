@@ -1,3 +1,5 @@
+scalar Date
+
 type Post {
   id: ID!
   title: String!
@@ -6,4 +8,5 @@ type Post {
   post: String!
   imageUrl: String
   isHighlight: Boolean
+  created_at: Date
 }

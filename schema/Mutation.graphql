@@ -12,4 +12,5 @@ input PostInput {
   post: String
   imageUrl: String
   isHighlight: Boolean
+  created_at: Date
 }

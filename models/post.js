@@ -7,6 +7,7 @@ const PostSchema = mongoose.Schema({
   post: String,
   imageUrl: String,
   isHighlight: Boolean,
+  created_at: { type: Date, default: new Date() },
 });
 
 module.exports = mongoose.model('Post', PostSchema);
